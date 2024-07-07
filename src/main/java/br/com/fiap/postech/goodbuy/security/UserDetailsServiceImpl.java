@@ -12,14 +12,14 @@ import org.springframework.web.server.ResponseStatusException;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-	@Value("${REMOTE_BASE_URI:http://localhost:8080/goodbuy/user/findByLogin/{userName}}")
+	@Value("${goodbuy.user.url}")
 	String baseURI;
 
 	@Override
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 		RestClient restClient = RestClient.create();
 		User user = restClient.get()
-				.uri(baseURI, userName)
+				.uri(baseURI + "/findByLogin/{userName}", userName)
 				.retrieve()
 				.body(User.class);
 		if (user != null) {
