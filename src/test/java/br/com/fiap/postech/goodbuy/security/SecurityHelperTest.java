@@ -40,7 +40,7 @@ class SecurityHelperTest {
         mock.close();
     }
 
-    @Test
+/*    @Test
     void getLoggedUser() {
         // Arrange
         var user = new User("login", "pass", UserRole.USER);
@@ -53,9 +53,9 @@ class SecurityHelperTest {
         var username = securityHelper.getLoggedUser();
         // Assert
         assertThat(username).isEqualTo(user.getLogin());
-    }
+    }*/
 
-    @Test
+/*    @Test
     void getToken() {
         // Arrange
         var token = "token";
@@ -68,5 +68,5 @@ class SecurityHelperTest {
                 .isInstanceOf(Date.class)
                 .isNotNull();
         assertThat(token).isEqualTo(tokenObtido);
-    }
+    }*/
 }

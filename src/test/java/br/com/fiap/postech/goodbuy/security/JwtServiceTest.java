@@ -9,7 +9,6 @@ import org.mockito.MockitoAnnotations;
 import java.util.Date;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class JwtServiceTest {
     private JwtService jwtService;
