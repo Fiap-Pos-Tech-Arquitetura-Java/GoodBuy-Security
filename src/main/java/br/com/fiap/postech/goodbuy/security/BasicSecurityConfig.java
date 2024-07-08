@@ -63,6 +63,7 @@ public class BasicSecurityConfig {
 						.requestMatchers(HttpMethod.POST,"/user").permitAll()
 						.requestMatchers(HttpMethod.GET,"/user/findByLogin/**").permitAll()
 						.requestMatchers("/user/login").permitAll()
+						.requestMatchers("/swagger-ui.html").permitAll()
 						.requestMatchers("/swagger-ui/**").permitAll()
 						.requestMatchers("/v3/api-docs/**").permitAll()
 						.requestMatchers("/error/**").permitAll()
